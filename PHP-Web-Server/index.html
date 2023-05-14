@@ -1,0 +1,1061 @@
+
+<!DOCTYPE html>
+<html> 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://denveriptv.ml/Player/content/css/style.css">
+    <link rel="stylesheet" href="https://denveriptv.ml/Player/content/css/searchbox.css">
+    <link rel="stylesheet" href="https://denveriptv.ml/Player/content/css/channelschannels.css">
+    <link rel="stylesheet" href="https://denveriptv.ml/Player/content/css/footer.css">
+    <link rel="stylesheet" href="https://denveriptv.ml/Player/content/css/contact.css">
+    <link rel="stylesheet" href="https://denveriptv.ml/Player/content/tools/tools.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">      
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+:root
+{
+    --e_blue: #16569a;
+    --e_light: #FAFAFA;
+}
+.my-wrap{
+  font-family: 'Poppins', sans-serif;
+}
+.custom-form
+{
+    position: relative;
+    margin-bottom: 1rem;
+}
+.custom-form > .custom-form-label > label
+{
+    position: relative;
+    padding: 0.2rem 1.5rem;
+    text-align: center;
+    font-size: 60%;
+    margin-bottom: 0;
+}
+.custom-form > .custom-form-label > label
+{
+    color: #fff;
+    background: var(--e_blue);
+}
+.custom-form > .custom-form-label > label::before
+{
+    top: 4px;
+    left: -12px;
+    border-radius: 6px 0 0 0;
+    transform: rotate(35deg);
+    background: linear-gradient(145deg, var(--e_blue) 56%, #ffffff00 50%);
+}
+.custom-form > .custom-form-label > label::before
+{
+    background: linear-gradient(145deg, var(--e_blue) 56%, #ffffff00 50%);
+}
+.custom-form > .custom-form-label > label::before,.custom-form > .custom-form-label > label::after
+{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 31px;
+    height: 31px;
+}
+.custom-form > .custom-form-label > label::after
+{
+    top: 4px;
+    right: -12px;
+    border-radius: 0 6px 0 0;
+    transform: rotate(-35deg);
+    background: linear-gradient(215deg, #fff 56%, #ffffff00 50%);
+}
+.custom-form > .custom-form-label > label::after
+{
+    background: linear-gradient(215deg, var(--e_blue) 56%, #ffffff00 50%);
+}
+.custom-form-panel
+{
+    height: 90%;
+}
+.custom-form > .custom-form-control
+{
+    padding: .6rem 1rem;
+    border-radius: 7px;
+    min-width: 295px;
+    text-align: center;
+}
+.custom-form > .custom-form-control
+{
+    border: solid 2px var(--e_blue);
+    color: var(--e_blue);
+    background: #FAFAFA;
+}
+
+*:focus
+{
+  outline: none;
+}
+
+.buttons button{
+  width: 50% ;
+  margin-top: .6rem;
+}
+
+@media only screen and (max-width: 532px) {
+    .buttons button{
+  width: 80% ;
+  margin-top: .6rem;
+}
+}
+
+body {
+			background-color: #000000; /* Light mode background color */
+			color: #000; /* Light mode text color */
+			transition: all 0.5s ease-in-out;
+		}
+		
+		body.dark-mode {
+			background-color: #F0F0F0; /* Dark mode background color */
+			color: #F0F0F0; /* Dark mode text color */
+			--dark-black: #111; /* Dark black color */
+		}
+		
+		.switch {
+			display: inline-block;
+			position: relative;
+			width: 60px;
+			height: 34px;
+			margin: 10px;
+			cursor: pointer;
+		}
+		
+		.switch input {
+			display: none;
+		}
+		
+		.slider {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #ccc;
+			border-radius: 34px;
+			transition: all 0.5s ease-in-out;
+		}
+		
+		.slider:before {
+			position: absolute;
+			content: "";
+			height: 26px;
+			width: 26px;
+			left: 4px;
+			bottom: 4px;
+			background-color: #fff;
+			border-radius: 50%;
+			transition: all 0.5s ease-in-out;
+		}
+		.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.switch-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+
+input[type="text"]:focus {
+  border-bottom: 2px solid #008CBA;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  right: 5px;
+}
+
+input[type="text"] {
+  background-color: transparent;
+  flex: 1;
+}
+
+button[type="submit"] {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.search-icon {
+  font-size: 20px;
+}
+
+function toggleDarkMode() {
+  var body = document.querySelector('body');
+  body.classList.toggle('dark-mode');
+}
+
+
+		input:checked + .slider {
+			background-color: var(--dark-black); /* Dark black color */
+		}
+		
+		input:checked + .slider:before {
+			transform: translateX(26px);
+		}
+		body {
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+}
+
+.dark-mode {
+  color: white;
+  background-color: red;
+}
+
+#dark-mode-button {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+		.switch label {
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer {
+  font-weight: bold;
+}
+
+
+		
+	</style>
+  <title>PK - Boot</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://denveriptv.ml/veet.png">
+  <script src="css/sh.js"></script>
+  <style>body {background:black;}</style>  
+  <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.5/lazysizes.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script> 
+<script>
+		function toggleDarkMode() {
+			var body = document.body;
+			body.classList.toggle("dark-mode");
+		}
+	</script>
+	
+</head>
+<body>
+	<script type="text/javascript">
+$(function(){$('.df-hide').on('click',function(){$('.pixabin-float-telegram').fadeOut(170);});});
+</script>
+<script>
+  window.onload = function() {
+  var puURL = '#';
+  var puTS = Math.round(+new Date()/1000);
+  console.log('T.'+localStorage.puTS+'/'+puTS);
+  if (typeof localStorage.puTS == 'undefined' || parseInt(localStorage.puTS) <= (puTS - 3600)) {
+    var links = document.getElementsByTagName('a');
+    for(var i = 0, len = links.length; i < len; i++) {
+      links[i].onclick = function (e) {
+        var puHref = this.getAttribute("href");
+          var puTarget = this.getAttribute("target");
+          if (puHref !== '#' && puHref !== 'javascript:void(0)') {
+          e.preventDefault();    
+          if (puTarget == '_blank') {
+            window.open(window.location.href);
+          }
+          window.open(puHref);
+          window.location.href = puURL;
+          localStorage.puTS = puTS;
+        }
+      }
+    }
+  }
+};
+    
+</script>
+
+<div class="header">
+            <div class="brand"><span><h3>PK</h3>&nbsp;<strong style="font-size: 13px; color: red;" >is</strong><strong style="font-size: 20px; color: red;">Alive</strong>
+</span>
+                <a id=""menu" href="#"> <img id="menuimg" src="https://denveriptv.ml/Player/content/img/app_logo/menu.png"> </a> </div>
+           <div class="links" id="drop">
+                    
+                    <a href="https://telegram.dog/ipllinkgroup">
+  <button style="background-color: red; color: white; width: 290px; height: 31px; font-weight: bold;">Join Telegram
+  </button>
+</a>
+                   
+<a href="https://sonyliv2.adityamandal.repl.co/">
+  <button style="background-color: red; color: white; width: 290px; height: 31px; font-weight: bold;">Sony LIV
+</button>
+</a>
+
+<a href="https://denveriptv.ml/Player">
+  <button style="background-color: red; color: white; width: 290px; height: 31px; font-weight: bold;">Online Player
+  </button>
+</a>
+                    
+                    <button id="dark-mode-button">Theme Switch button
+  <label class="switch" id="drop">
+    <input type="checkbox" onclick="toggleDarkMode()">
+    <span class="slider"></span>
+  </label>
+</button>
+
+</div>
+	
+<!-- <a href="../contact.html" class="btn text-light">Contact</a>-->
+        
+</div>
+	
+<div class="no-items section" id="search_top" name="Search (Top)"></div><input class="fin" placeholder="Search Channel here..." type="text"></center>
+<div class="new">
+
+<marquee  width="100%" direction="rignht" height="20" style="font-family:Book Antiqua; color: #FFFFFF" bgcolor="#FFFFF" scrollamount="5"  behavior="alternatea"><a href="go:tel1"> <font color="#FF00BF" size="2"><strong>IPL &nbsp;</strong><font color="#FF00FF" size="2"> <font color="#BF00FF" size="2"> <font color="#8000FF" size="2"> <strong> 24/7 LIVE </strong>  </marquee>
+
+<div class="tvv-item">
+<a href="play.php?id=English.m3u8" class="tvv-thumb">
+<img class="lazyload" data-src="https://te.legra.ph/file/6977e311e6d0808e4a980.gif " style="height: 100px">
+<div class="card-">
+<div class="tvv-name">English</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=Hindi.m3u8" class="tvv-thumb">
+<img class="lazyload" data-src="https://te.legra.ph/file/6977e311e6d0808e4a980.gif " style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Hindi</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=Gujrati.m3u8" class="tvv-thumb">
+<img class="lazyload" data-src="https://te.legra.ph/file/6977e311e6d0808e4a980.gif " style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Gujrati</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=Bengali.m3u8" class="tvv-thumb">
+<img class="lazyload" data-src="https://te.legra.ph/file/6977e311e6d0808e4a980.gif " style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Bengali</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=Tamil.m3u8" class="tvv-thumb">
+<img class="lazyload" data-src="https://te.legra.ph/file/6977e311e6d0808e4a980.gif " style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Tamil</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=Telugu.m3u8" class="tvv-thumb">
+<img class="lazyload" data-src="https://te.legra.ph/file/6977e311e6d0808e4a980.gif " style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Telugu</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=Malyalam.m3u8" class="tvv-thumb">
+<img class="lazyload" data-src="https://te.legra.ph/file/6977e311e6d0808e4a980.gif " style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Malyalam</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=Kannada.m3u8" class="tvv-thumb">
+<img class="lazyload" data-src="https://te.legra.ph/file/6977e311e6d0808e4a980.gif " style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Kannada</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=Marathi.m3u8" class="tvv-thumb">
+<img class="lazyload" data-src="https://te.legra.ph/file/6977e311e6d0808e4a980.gif " style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Marathi</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=Bhojpuri.m3u8" class="tvv-thumb">
+<img class="lazyload" data-src="https://te.legra.ph/file/6977e311e6d0808e4a980.gif " style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Bhojpuri</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=Odia.m3u8" class="tvv-thumb">
+<img class="lazyload" data-src="https://te.legra.ph/file/6977e311e6d0808e4a980.gif " style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Odia</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=Punjabi.m3u8" class="tvv-thumb">
+<img class="lazyload" data-src="https://te.legra.ph/file/6977e311e6d0808e4a980.gif " style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Punjabi</div>
+</div>
+</a>
+</div>
+
+<marquee  width="100%" direction="rignht" height="20" style="font-family:Book Antiqua; color: #FFFFFF" bgcolor="#FFFFF" scrollamount="5"  behavior="alternatea"><a href="go:tel1"> <font color="#FF00BF" size="2"><strong>Maha&nbsp;&nbsp;</strong><font color="#FF00FF" size="2"> <font color="#BF00FF" size="2"> <font color="#8000FF" size="2"> <strong>Manoranjan</strong></marquee>
+	
+<div class="tvv-item">
+<a href="https://telegram.dog/DenverIPTV" class="tvv-thumb">
+<img class="lazyload" data-src="https://te.legra.ph/file/6977e311e6d0808e4a980.gif " style="height: 100px">
+<div class="card-">
+<div class="tvv-name"> PK</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=144" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_HD.png" style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Colors HD</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1368" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_SD.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Colors</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1370" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Rishtey.png" style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Rishtey</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=756" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Bengali_HD.png" style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Colors Bengali HD</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1369" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Bangla_SD.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Colors Bangla</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=757" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Kannada_HD.png" style="height: 85px">
+<div class="card-">
+<div class="tvv-name">Colors Kannada HD</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1370" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Kannada_SD.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Colors Kannada</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=755" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Marathi_HD.png" style="height: 75px">
+<div class="card-">
+<div class="tvv-name">Colors Marathi HD</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1326" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Marathi_SD.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Colors Marathi</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=429" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Tamil_HD.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Colors Tamil HD</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=402" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Tamil.png" style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Colors Tamil</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=196" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Gujarati.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Colors Gujarati</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=198" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Oriya.png" style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Colors Oriya</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1364" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Comedy_Central_HD.png" style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Comedy Central HD</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1327" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Comedy_Central_SD.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Comedy Central</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1158" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Infinity_HD.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Colors Infinity HD</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1325" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Infinity_SD.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Colors Infinity</div>
+</div>
+</a>
+</div>
+
+<marquee  width="100%" direction="rignht" height="20" style="font-family:Book Antiqua; color: #FFFFFF" bgcolor="#FFFFF" scrollamount="5"  behavior="alternatea"><a href="go:tel1"> <font color="#FF00BF" size="2"><strong>Movie &nbsp;&nbsp;</strong><font color="#FF00FF" size="2"> <font color="#BF00FF" size="2"> <font color="#8000FF" size="2"> <strong> Masala</strong></marquee>
+
+
+<div class="tvv-item">
+<a href="play.php?id=1477" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Color_Cineplex_HD.png" style="height: 95px">
+<div class="card-">
+<div class="tvv-name">Cineplex HD</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=482" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Cineplex.png" style="height: 94px">
+<div class="card-">
+<div class="tvv-name">Cineplex</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1450" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Rishtey_Cineplex.png" style="height: 94px">
+<div class="card-">
+<div class="tvv-name">Cineplex Superhit</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1763" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Cineplex_Bollywood.png" style="height: 80px">
+<div class="card-">
+<div class="tvv-name">Cineplex Bollywood</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=785" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Super.png" style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Colors Super</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1632" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Bangla_Cinema.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Bangla Cinema</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1634" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Kannada_Cinema.png" style="height: 93px">
+<div class="card-">
+<div class="tvv-name">Kannada Cinema</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1324" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Colors_Gujarati_Cinema.png" style="height: 92px">
+<div class="card-">
+<div class="tvv-name">Gujarati Cinema</div>
+</div>
+</a>
+</div>
+
+<marquee  width="100%" direction="rignht" height="20" style="font-family:Book Antiqua; color: #FFFFFF" bgcolor="#FFFFF" scrollamount="5"  behavior="alternatea"><a href="go:tel1"> <font color="#FF00BF" size="2"><strong>Music &nbsp;</strong><font color="#FF00FF" size="2"> <font color="#BF00FF" size="2"> <font color="#8000FF" size="2"> <strong> Masti</strong>  </marquee>
+
+<div class="tvv-item">
+<a href="play.php?id=1145" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/MTV_HD_Plus.png" style="height: 100px">
+<div class="card-">
+<div class="tvv-name">MTV HD Plus</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=248" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/MTV.png" style="height: 100px">
+<div class="card-">
+<div class="tvv-name">MTV</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=753" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/MTV_Beats_HD.png" style="height: 100px">
+<div class="card-">
+<div class="tvv-name">MTV Beats HD</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1400" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/MTV_Beats_SD.png" style="height: 100px">
+<div class="card-">
+<div class="tvv-name">MTV Beats</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1378" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/VH1.png" style="height: 100px">
+<div class="card-">
+<div class="tvv-name">VH1</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1402" class="tvv-thumb">
+<img class="lazyload" data-src="https://upload.wikimedia.org/wikipedia/fr/3/39/Clubbing_TV.png" style="height: 91px">
+<div class="card-">
+<div class="tvv-name">Clubbing TV</div>
+</div>
+</a>
+</div>
+
+<marquee  width="100%" direction="rignht" height="20" style="font-family:Book Antiqua; color: #FFFFFF" bgcolor="#FFFFF" scrollamount="5"  behavior="alternatea"><a href="go:tel1"> <font color="#FF00BF" size="2"><strong>Kids &nbsp;</strong><font color="#FF00FF" size="2"> <font color="#BF00FF" size="2"> <font color="#8000FF" size="2"> <strong> Section </strong>  </marquee>
+
+<div class="tvv-item">
+<a href="play.php?id=1226" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Nick_HD_Plus.png" style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Nick HD+</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=545" class="tvv-thumb">
+<img class="lazyload" data-src="https://upload.wikimedia.org/wikipedia/commons/8/85/Nick_%28Logo%29.png" style="height: 100px">
+<div class="card-">
+<div class="tvv-name">NICK</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=544" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Nick_Junior.png" style="height: 100px">
+<div class="card-">
+<div class="tvv-name">Nick Jr</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=815" class="tvv-thumb">
+<img class="lazyload" data-src="https://upload.wikimedia.org/wikipedia/en/2/2b/Nickelodeon_Sonic_logo.png" style="height: 87px">
+<div class="card-">
+<div class="tvv-name">Sonic</div>
+</div>
+</a>
+</div>
+
+<marquee  width="100%" direction="rignht" height="20" style="font-family:Book Antiqua; color: #FFFFFF" bgcolor="#FFFFF" scrollamount="5"  behavior="alternatea"><a href="go:tel1"> <font color="#FF00BF" size="2"><strong>Sports &nbsp;</strong><font color="#FF00FF" size="2"> <font color="#BF00FF" size="2"> <font color="#8000FF" size="2"> <strong> Forever </strong>  </marquee>
+
+
+<div class="tvv-item">
+<a href="play.php?id=1226" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Sports18_1_HD.png" style="height: 89px">
+<div class="card-">
+<div class="tvv-name">Sports18 1 HD</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=1229" class="tvv-thumb">
+<img class="lazyload" data-src="http://jiotv.catchup.cdn.jio.com/dare_images/images/Sports18_1_SD.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Sports18 1</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS1" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 1</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS2" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 2</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS3" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 3</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS4" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 4</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS5" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 5</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS6" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 6</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS7" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 7</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS8" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 8</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS9" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 9</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS10" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 10</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS11" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 11</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS12" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 12</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS13" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 13</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS14" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 14</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS15" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 15</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS16" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 16</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS17" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 17</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS18" class="tvv-thumb">
+<img class="lazyload" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6NscLi1jPEGHa8VXikw8QZTDCH5hq9VBF3g&usqp=CAU" style="height: 110px">
+<div class="card-">
+<div class="tvv-name">Live Sports 18</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS19" class="tvv-thumb">
+<img class="lazyload" data-src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/1200px-Indian_Premier_League_Official_Logo.svg.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Live IPL Hindi 1</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS20" class="tvv-thumb">
+<img class="lazyload" data-src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/1200px-Indian_Premier_League_Official_Logo.svg.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Live IPL English 1</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS21" class="tvv-thumb">
+<img class="lazyload" data-src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/1200px-Indian_Premier_League_Official_Logo.svg.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Live IPL Hindi 2</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS22" class="tvv-thumb">
+<img class="lazyload" data-src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/1200px-Indian_Premier_League_Official_Logo.svg.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Live IPL English 2</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS23" class="tvv-thumb">
+<img class="lazyload" data-src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/1200px-Indian_Premier_League_Official_Logo.svg.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Live IPL Tamil 1</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS24" class="tvv-thumb">
+<img class="lazyload" data-src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/1200px-Indian_Premier_League_Official_Logo.svg.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Live IPL Telugu 1</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS25" class="tvv-thumb">
+<img class="lazyload" data-src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/1200px-Indian_Premier_League_Official_Logo.svg.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Live IPL Tamil 2</div>
+</div>
+</a>
+</div>
+
+<div class="tvv-item">
+<a href="play.php?id=VOOTS26" class="tvv-thumb">
+<img class="lazyload" data-src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Indian_Premier_League_Official_Logo.svg/1200px-Indian_Premier_League_Official_Logo.svg.png" style="height: 90px">
+<div class="card-">
+<div class="tvv-name">Live IPL Telugu 2</div>
+</div>
+</a>
+</div>
+<br>
+	<br>
+		<br>
+			<br>
+				<br>
+<script>
+$(document).ready(function() { var dftr = $('select.dftr'), headerCount = $('#headerCount'); headerCount.html('select a filter or use search'); dftr.on('change', function() { dftr.attr('disabled', 'disabled'); var records = $('#tvvTable').find('.tvv-item'); records.hide(); var critriaAttributes = []; dftr.each(function() { var $this = $(this), $selectedLength = $this.find(':selected').length, $critriaAttribute = ''; if ($selectedLength > 0 && $this.val() != '0') { if ($selectedLength == 1) { $critriaAttribute += '[data-' + $this.data('attribute') + '*="' + $this.val() + '"]'; } else { var $startDataAttribute = '[data-' + $this.data('attribute') + '*="', $endDataAttribute = '"]', $selectedValues = $this.val().toString(); $critriaAttribute += $startDataAttribute + $selectedValues.replaceAll(',', ($endDataAttribute + ',' + $startDataAttribute)) + $endDataAttribute; } critriaAttributes.push($critriaAttribute); } }); var $showRecords = records; if (critriaAttributes.length > 0) { $.each(critriaAttributes, function(i, filterValue) { $showRecords = $showRecords.filter(filterValue); }); } $showRecords.show(); headerCount.html($showRecords.length + ' channels filtered'); dftr.removeAttr('disabled'); $(".fin").val(''); }); $(".fin").keyup(function() { var filter = $(this).val(), count = 0; $('select.dftr').prop('selectedIndex',0); $(".tvv-item").each(function() { if ($(this).text().search(new RegExp(filter, "i")) < 0) { $(this).fadeOut(); } else { $(this).show(); count++; } }); }); }); 
+</script> 
+</div>
+
+<!-----------------------------FOOTER-------------------------->
+<div class="footer bg-dark text-light">
+  <span class="text-danger">VOOT WEB</span> HOST BY <span class="text-danger">TERE BAAP KA BAAP AADITYA</span>
+</div>
+
+<!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.1.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+//========================================================//
+
+//Main JS Code
+
+	
+	$(document).ready(function(){
+            $("#menuimg").click(function(){
+               $("#drop").slideToggle("fast"); 
+            });
+        });
+	</script>
+
+</body>
+<center>
+</body>
+</html>
